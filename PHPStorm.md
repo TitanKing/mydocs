@@ -22,6 +22,3 @@ Jump to any part of the code without using the mouse.
 `Ctrl+Semicolon` Then press a letter of the word you would want to jump to, it will then give you a lettered index to press next and it will then jump to that word.
 `Hold-Shift+Indexed Letter` to highlight to that word.
 `(While index shows)Enter` to further expand the indexes.
-
-<input onchange="out='';for(var i=0;i<event.fpfiles.length;i++){out+=event.fpfiles[i].url;out+=' '};alert(out)" data-fp-services="COMPUTER" data-fp-store-location="gcs" data-fp-multiple="true" data-fp-container="modal" data-fp-mimetypes="*/*" data-fp-apikey="AMd29LFq4SrCjtN1n5Na4z" type="filepicker">
-
