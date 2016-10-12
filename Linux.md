@@ -4,8 +4,9 @@
     // Build dependencies (If available in repost but you want newer version)
     apt-get build-dep someapp
     // If there is no configure first run autogen.sh
+    ./autogen.sh
     ./configure
-    ./make 
+    make 
     // Now instead of "make install" use checkinstall, this will keep track.
     sudo checkinstall
     // Now you can remove a package by doing 

@@ -192,6 +192,10 @@ Assuming you created a React Native project and the setup steps are completed, y
 
 I had issues with remote debugging in Chrome where the debugger would only send once and then after saving would start searching for the debugger.
 
+**Before you go this route**
+
+**IMPORTANT NOTE:** If you are using Chrome - at the time of testing Chrome gave issues with debugging but Chromium worked fine. Chances are good that below would not even be needed.
+
 Here is what I did to resolve this:
 1. I ended up using Genymotion.
 2. In Genymotion set the Network Mode to bridge for the virtual device.
