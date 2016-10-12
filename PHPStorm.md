@@ -6,7 +6,7 @@ I find PHPStorm to be one of the best IDEs out there, following are a list of ni
 ### Bookmarks
 Bookmarks is used to jump between lines of code within a project, it is extremely useful if you code between two files etc.
 `Ctrl+F11` Create Bookmark
-`Ctrl+F12` View Bookmarks (Can delete from here too)
+`Shift+F11` View Bookmarks (Can delete from here too)
 `Ctrl+Up/Down` Shift Bookmarks up or down
 
 ### General
@@ -15,10 +15,29 @@ Bookmarks is used to jump between lines of code within a project, it is extremel
 `Ctrl+Space` Basic code completion.
 `Ctrl+Alt+N` Refactor code (custom keys)
 `ctrl+/` Comment/uncomment current line or selected block with line comments
-`shift+ctrl+/` Comment/uncomment code with block comments 
+`shift+ctrl+/` Comment/uncomment code with block comments
+`ctrl+shift+t` Call code templates or surround code.
+`ctrl+shift+n` Quick file search and open.
 
 ### AceJump
 Jump to any part of the code without using the mouse.
 `Ctrl+Semicolon` Then press a letter of the word you would want to jump to, it will then give you a lettered index to press next and it will then jump to that word.
 `Hold-Shift+Indexed Letter` to highlight to that word.
 `(While index shows)Enter` to further expand the indexes.
+
+### Custom
+`M1` Acejump
+`M2` Quick file search and open.
+`M3`
+`M4`
+`M5`
+
+### Views
+`Alt+G` Refactor Code
+`Alt+F` Full Screen
+`Alt+D` Distraction Free
+`Alt+P` Presentation Mode
+
+
+
+

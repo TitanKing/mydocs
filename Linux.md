@@ -27,6 +27,7 @@
 * `finger {userid}` Find out what someone is up to.
 * `df` Checking for disk space on available volumes.
 * `alias {name} '{command}'` Put the command in 'single quotes'. More useful in your .cshrc file.
+* `kill -9 3333` kills a specific process where 3333 is the process id.
 
 ## General Files & Folders
 * `chmod +x filename` Make a file executable.
@@ -112,7 +113,7 @@
 ## Networking
 > To change newtwork address static:
 
-> Edit `/etc/networking/`
+Edit `/etc/network/interfaces` and change to your settings:
 
     auto lo
     iface lo inet loopback
@@ -124,7 +125,6 @@
     network 10.0.0.0
     broadcast 10.0.0.255
     gateway 10.0.0.2
-    dns-nameservers 197.242.94.51 197.189.212.164
     
 > To change DNS:
 
@@ -133,4 +133,8 @@ Edit `/etc/resolv.conf` and change to:
     nameserver 8.8.8.8
     nameserver 8.8.4.4
 
+Restart with `sudo /etc/init.d/networking restart`
 
+See what is listening on a port:
+
+    netstat -tulnp | grep 8081
