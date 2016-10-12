@@ -44,6 +44,7 @@
 * `cp {file1} {file2}`  
 * `cp -r {dir1} {dir2}` Recursive, copy directory and all subdirs.
 * `cat {newfile} >> {oldfile}` Append newfile to end of oldfile.
+
 ## Move (or rename) a file
 * `mv {oldfile} {newfile}`  Moving a file and renaming it are the same thing.
 * `mv {oldname} {newname}`
@@ -103,3 +104,33 @@
 > Add -R to do a directory recursively.
 
     chown himanshu:friends tmpfile
+
+## Scripts
+    // Rather use .bash_aliases instead of bashrc in Ubuntu or others that have it.
+* `alias <Name_with which you wanna call it >='./filename.sh'` create shortcut to script by adding to `/home/username/.bashrc` then do run `source ~/.bashrc`
+
+## Networking
+> To change newtwork address static:
+
+> Edit `/etc/networking/`
+
+    auto lo
+    iface lo inet loopback
+    
+    auto eno1
+    iface eno1 inet static
+    address 10.0.0.100
+    netmask 255.255.255.0
+    network 10.0.0.0
+    broadcast 10.0.0.255
+    gateway 10.0.0.2
+    dns-nameservers 197.242.94.51 197.189.212.164
+    
+> To change DNS:
+
+Edit `/etc/resolv.conf` and change to:
+
+    nameserver 8.8.8.8
+    nameserver 8.8.4.4
+
+
