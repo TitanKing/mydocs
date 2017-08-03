@@ -12,16 +12,16 @@
     // Now you can remove a package by doing 
     sudo dpkg -r someapp
 
-## DPKG
+## DPKG ##
 > Interesting and helpful functions for packages.
 
-## APT
+## APT ##
 `sudo add-apt-repository <repo>` Add repository.
 
 * `dpkg -s <packagename>` See what version a package is and get info about that package.
 * `apt-cache showpkg inkscape | grep "gtk"` Check application dependency and other information regarding app. The grep command simply searches for something inside the results.
 
-## System
+## System ##
 * `sudo lsof -i -P` What TCP/IP ports are open.
 * `blkid` Find HDD device id.
 * `/etc/fstab` And create automount mount by editing.
@@ -30,7 +30,7 @@
 * `alias {name} '{command}'` Put the command in 'single quotes'. More useful in your .cshrc file.
 * `kill -9 3333` kills a specific process where 3333 is the process id.
 
-## General Files & Folders
+## General Files & Folders ##
 * `chmod +x filename` Make a file executable.
 * `ln -s /home/myname/sh/runme.sh /usr/local/bin/runme` Create symlink.
 * `rmdir {dirname}` Only works if `{dirname}` is empty.
@@ -42,24 +42,24 @@
 * `find . -name "*.bak" -type f -delete` Find specific file types and delete them.
 * `find . -name "*.bak" -type f` Test files found with this command before running eg. -delete
 
-## Copy a file or directory
+## Copy a file or directory ##
 * `cp {file1} {file2}`  
 * `cp -r {dir1} {dir2}` Recursive, copy directory and all subdirs.
 * `cat {newfile} >> {oldfile}` Append newfile to end of oldfile.
 
-## Move (or rename) a file
+## Move (or rename) a file ##
 * `mv {oldfile} {newfile}`  Moving a file and renaming it are the same thing.
 * `mv {oldname} {newname}`
 * `rsync -r dir1/ dir2` Syncs a directory with another, `/` means content of.
 * `rsync -a` syncs recursively and preserves all files.
 * `rsync -azP username@remote_host:/home/username/dir1 place_to_sync_on_local_machine` z = compression, P = progress
 
-## Help on any Unix command
+## Help on any Unix command ##
 * `man {command}`   Type man ls to read the manual for the ls command.
 * `whatis {command}`  Give short description of command. (Not on RAIN?)
 * `apropos {keyword}`   Search for all Unix commands that match keyword, eg apropos file. (Not on RAIN?)
 
-## List a directory
+## List a directory ##
 * `ls {path}` It's ok to combine attributes, eg ls -laF gets a long listing of all files with types.
 * `ls {path_1} {path_2}` List both {path_1} and {path_2}.
 * `ls -l {path}` Long listing, with date, size and permissions.
@@ -69,7 +69,7 @@
 * `ls {path} > {filename}` Redirect directory to a file.
 * `ls {path} | more`  Show listing one screen at a time.
 
-## Text files
+## Text files ##
 * `more {filename}` View file one screen at a time.
 * `less {filename}` Like more, with extra features.
 * `cat {filename}` View file, but it scrolls.
@@ -85,14 +85,14 @@
 * `spell {file}` Display misspelled words.
 * `wc {file}` Count words in file.
 
-## Pipes and Redirection
+## Pipes and Redirection ##
 * `{command} > {file}` Redirect output to a file, eg ls > list.txt writes directory to file.
 * `{command} >> {file}` Append output to an existing file, eg cat update >> archive adds update to end of archive.
 * `{command} < {file}` Get input from a file, eg sort < file.txt
 * `{command} < {file1} > {file2}` Get input from file1, and write to file2, eg sort < old.txt > new.txt sorts old.txt and saves as new.txt.
 * `{command} | {command}` Pipe one command to another, eg ls | more gets directory and sends it to more to show it one page at a time.
 
-## Permissions
+## Permissions ##
 > You can change file permissions with letters:
 
     u = user (yourself)     g = group   a = everyone
@@ -107,11 +107,11 @@
 
     chown himanshu:friends tmpfile
 
-## Scripts
+## Scripts ##
     // Rather use .bash_aliases instead of bashrc in Ubuntu or others that have it.
 * `alias <Name_with which you wanna call it >='./filename.sh'` create shortcut to script by adding to `/home/username/.bashrc` then do run `source ~/.bashrc`
 
-## Networking
+## Networking ##
 > To change newtwork address static:
 
 Edit `/etc/network/interfaces` and change to your settings:
@@ -139,3 +139,13 @@ Restart with `sudo /etc/init.d/networking restart`
 See what is listening on a port:
 
     netstat -tulnp | grep 8081
+    
+## Adding files to PATH variable so that it can be executed; ##
+
+The file .bashrc is read when you start an interactive shell. This is the file that you should update. E.g:
+
+    export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/
+    
+    # Restart the shell for the changes to take effect or source it, i.e.:
+
+    source .bashrc
