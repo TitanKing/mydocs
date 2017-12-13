@@ -139,7 +139,7 @@ All kexts will be installed to `/Library/Extensions` using a file commander/term
 	- Open the installation drive's /Library/Extensions/ folder;
 	- Find and trash the FakeSMC_GPUSensors.kext;
 	- Delete the Trash.​
-- (Optional) If you have a current Nvidia graphics card, copy the Nviida driver from the thumb drive onto your Desktop, unzip it and install the driver now, but don't reboot when the installer is done, just leave it along as we'll come back to it.
+- (Optional) If you have a current Nvidia graphics card, copy the Nvidia driver from the thumb drive onto your Desktop, unzip it and install the driver now, but don't reboot when the installer is done, just leave it along as we'll come back to it.
 - Drag & drop the Codec Commander zip file from the thumb drive onto your Desktop and un-zip the file. Drag the CodecCommand.kext from the Release folder to the Desktop. Drag the zip & the two folders to the Trash.
 - Drag & drop the KextBeast on your Desktop, unzip it and run it; chose to put the kexts in the /Library/Extensions folder. Drag and drop the CodecCommand.kext to a safe place.
 - Now you need to install your processor's SSDT.aml, with Clover Configurator mount EFI or use EFI Mounter if you know the drive path.
